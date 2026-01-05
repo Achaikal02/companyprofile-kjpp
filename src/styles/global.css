@@ -1,0 +1,66 @@
+:root {
+  --primary: #0b5ed7;       /* biru logo */
+  --primary-dark: #081f3a;  /* navy corporate */
+  --accent: #19b5fe;        /* biru muda logo */
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e5e7eb;
+  --font-base: 16px;
+  --line-base: 1.7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-size: var(--font-base);
+  line-height: var(--line-base);
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(40px, 5vw, 56px);
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: clamp(26px, 3vw, 34px);
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+p {
+  margin: 0;
+  color: var(--text);
+}
+
+small {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.container {
+  max-width: 1320px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

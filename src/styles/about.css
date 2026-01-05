@@ -1,0 +1,206 @@
+/* ================================
+   ABOUT PAGE – ENTERPRISE STYLE
+================================ */
+
+.about-page {
+  background: #ffffff;
+}
+
+.about-page .container {
+  max-width: 1100px;
+}
+
+/* PAGE INTRO */
+
+.page-intro {
+  padding: 140px 0 100px;
+}
+
+.page-intro h1 {
+  font-size: 42px;
+  max-width: 800px;
+}
+
+.page-intro p {
+  font-size: 17px;
+  max-width: 720px;
+}
+
+/* SECTION BASE */
+
+.about-section {
+  padding: 110px 0;
+}
+
+.about-section.alt {
+  background: #f8fafc;
+}
+
+.about-section h2 {
+  margin-bottom: 32px;
+}
+
+.about-section p {
+  max-width: 760px;
+  line-height: 1.8;
+}
+
+.about-section.alt + .about-section {
+  margin-top: 40px;
+}
+
+
+/* PRINCIPLES */
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.principle-item {
+  padding: 24px 24px 24px 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  border-left: none;
+  border-top: 3px solid #2563eb;
+}
+
+
+.principle-item h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.principle-item p {
+  font-size: 15px;
+  color: #64748b;
+}
+
+/* STATS */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stat-item strong {
+  font-size: 40px;
+  display: block;
+  font-weight: 700;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-item span {
+  color: #64748b;
+  font-size: 20px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* DATA GRID */
+
+.data-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  column-gap: 48px;
+  row-gap: 24px;
+  max-width: 900px;
+  margin-top: 40px;
+
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.data-grid dt {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.data-grid dd {
+  margin: 0;
+  line-height: 1.6;
+  color: #334155;
+}
+
+/* TEAM CTA */
+
+.team-cta {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.team-cta a {
+  font-size: 16px;
+}
+
+/* LINK */
+
+.link-primary {
+  font-weight: 600;
+  font-size: 15px;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.link-primary:hover {
+  text-decoration: underline;
+}
+
+
+.about-section h2,
+.about-section p,
+.page-intro h1,
+.page-intro p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .page-intro {
+    padding: 96px 0 64px;
+  }
+
+  .about-section {
+    padding: 72px 0;
+  }
+
+  .principles {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .data-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .data-grid dt {
+    margin-top: 16px;
+  }
+}

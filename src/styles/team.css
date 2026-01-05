@@ -1,0 +1,85 @@
+.team-section {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 8vw;
+  gap: 80px;
+
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+.team-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Selang-seling kiri-kanan */
+.team-section.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.team-section.reverse .team-photo {
+  order: -1;
+}
+
+/* TEXT */
+.team-text h2 {
+  font-size: 40px;
+  line-height: 1.15;
+  margin-bottom: 8px;
+  color: var(--primary-dark);
+}
+
+.team-text .role {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.meta p {
+  margin-bottom: 16px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+/* PHOTO */
+.team-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-photo img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,.18));
+}
+
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .team-section {
+    grid-template-columns: 1fr;
+    padding: 100px 24px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .team-section.reverse .team-photo {
+    order: 0;
+  }
+
+  .team-photo img {
+    height: 420px;
+  }
+}
