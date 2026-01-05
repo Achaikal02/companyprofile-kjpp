@@ -121,7 +121,7 @@
 
 .btn-outline {
   border: 1px solid #cbd5f5;
-  color: #2563eb;
+  color: #2563eb !important;
   padding: 12px 22px;
   border-radius: 10px;
   font-size: 14px;
