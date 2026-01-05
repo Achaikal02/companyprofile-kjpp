@@ -1,4 +1,5 @@
 import '../styles/hero.css'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -35,9 +36,9 @@ const Hero = () => {
         </ul>
 
         <div className="hero-actions">
-          <a href="/kontak" className="hero-btn primary">
+          <Link to="/kontak" className="hero-btn primary">
             Hubungi Kami
-          </a>
+          </Link>
           <a href="#tentang-kami" className="hero-btn secondary">
             Tentang Kami
           </a>
