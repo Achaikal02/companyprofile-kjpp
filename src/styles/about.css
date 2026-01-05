@@ -175,20 +175,110 @@
 }
 
 
-/* RESPONSIVE */
+/* ==========================================================
+   RESPONSIVE – ABOUT PAGE
+========================================================== */
 
+/* ===== Tablet Large (≤1024px) ===== */
+@media (max-width: 1024px) {
+  .page-intro {
+    padding: 120px 0 80px;
+  }
+
+  .page-intro h1 {
+    font-size: 36px;
+  }
+
+  .page-intro p {
+    font-size: 16px;
+  }
+
+  .about-section {
+    padding: 88px 0;
+  }
+
+  .principles {
+    gap: 40px;
+  }
+
+  .stats {
+    gap: 48px;
+  }
+
+  .stat-item strong {
+    font-size: 34px;
+  }
+
+  .stat-item span {
+    font-size: 18px;
+  }
+}
+
+/* ===== Tablet / Small Laptop (≤900px) ===== */
 @media (max-width: 900px) {
   .page-intro {
     padding: 96px 0 64px;
+  }
+
+  .page-intro h1 {
+    font-size: 32px;
   }
 
   .about-section {
     padding: 72px 0;
   }
 
+  /* Grid turun bertahap */
+  .principles {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .data-grid {
+    padding: 32px;
+    column-gap: 32px;
+  }
+}
+
+/* ===== Mobile (≤600px) ===== */
+@media (max-width: 600px) {
+  .page-intro {
+    padding: 72px 0 56px;
+  }
+
+  .page-intro h1 {
+    font-size: 28px;
+  }
+
+  .page-intro p {
+    font-size: 15px;
+  }
+
+  .about-section {
+    padding: 64px 0;
+  }
+
+  .about-section h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .about-section p {
+    font-size: 15px;
+  }
+
   .principles {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
+  }
+
+  .principle-item {
+    padding: 20px;
   }
 
   .stats {
@@ -196,11 +286,43 @@
     gap: 24px;
   }
 
+  .stat-item strong {
+    font-size: 30px;
+  }
+
+  .stat-item span {
+    font-size: 16px;
+  }
+
   .data-grid {
     grid-template-columns: 1fr;
+    padding: 24px;
   }
 
   .data-grid dt {
     margin-top: 16px;
+  }
+
+  .team-cta {
+    margin-top: 32px;
+  }
+
+  .team-cta a {
+    font-size: 15px;
+  }
+}
+
+/* ===== Small Mobile (≤420px) ===== */
+@media (max-width: 420px) {
+  .page-intro h1 {
+    font-size: 24px;
+  }
+
+  .about-section h2 {
+    font-size: 22px;
+  }
+
+  .stat-item strong {
+    font-size: 28px;
   }
 }

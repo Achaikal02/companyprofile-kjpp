@@ -164,13 +164,156 @@
 }
 
 
-@media (max-width: 768px) {
+/* ===============================
+   RESPONSIVE IMPROVEMENTS
+================================ */
+
+/* ===== Tablet (≤1024px) ===== */
+@media (max-width: 1024px) {
+  .home-services {
+    padding: 80px 24px 96px;
+  }
+
+  .home-services-header h2 {
+    font-size: 32px;
+  }
+
   .home-about-hero {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  .home-about-content {
+    max-width: 640px;
   }
 
   .home-about-content h1 {
-    font-size: 36px;
+    font-size: 40px;
+  }
+
+  .stats {
+    gap: 40px;
+  }
+
+  .stat-item strong {
+    font-size: 34px;
+  }
+
+  .stat-item span {
+    font-size: 18px;
+  }
+}
+
+/* ===== Mobile / Tablet Small (≤768px) ===== */
+@media (max-width: 768px) {
+  .home-services {
+    padding: 64px 20px 80px;
+  }
+
+  .home-services-header {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .home-services-header h2 {
+    font-size: 28px;
+  }
+
+  .home-services-header p {
+    font-size: 15px;
+  }
+
+  /* HERO */
+  .home-about-hero {
+    min-height: auto;
+    padding: 120px 24px 80px;
+    align-items: flex-start;
+  }
+
+  .home-about-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(2,6,23,0.85) 0%,
+      rgba(2,6,23,0.55) 60%,
+      rgba(2,6,23,0.15) 100%
+    );
+  }
+
+  .home-about-content {
+    max-width: 100%;
+  }
+
+  .home-about-content h1 {
+    font-size: 34px;
+  }
+
+  .home-about-content p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  /* BUTTONS */
+  .home-about-actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .btn-outline {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+
+  /* STATS */
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .stat-item strong {
+    font-size: 30px;
+  }
+
+  .stat-item span {
+    font-size: 16px;
+  }
+}
+
+/* ===== Small Mobile (≤480px) ===== */
+@media (max-width: 480px) {
+  .home-services {
+    padding: 56px 16px 72px;
+  }
+
+  .home-services-header h2 {
+    font-size: 24px;
+  }
+
+  .home-services-header p {
+    font-size: 14px;
+  }
+
+  .home-about-content h1 {
+    font-size: 28px;
+  }
+
+  .home-about-eyebrow {
+    font-size: 12px;
+  }
+
+  .home-about-content p {
+    font-size: 15px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .stat-item strong {
+    font-size: 28px;
+  }
+
+  .stat-item span {
+    font-size: 15px;
   }
 }

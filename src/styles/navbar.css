@@ -1,10 +1,16 @@
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
 .navbar {
-  background: white;
+  background: #ffffff;
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 100;
 }
+
+/* INNER */
 
 .nav-inner {
   display: flex;
@@ -13,8 +19,18 @@
   height: 72px;
 }
 
+/* BRAND */
+
 .brand img {
   height: 42px;
+  display: block;
+}
+
+/* DESKTOP NAV */
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -23,11 +39,18 @@ nav a {
   font-weight: 500;
   letter-spacing: 0.01em;
   color: var(--text);
+  text-decoration: none;
   position: relative;
+  transition: color .2s ease;
+}
+
+nav a:hover {
+  color: var(--primary);
 }
 
 nav a.active {
   color: var(--primary);
+  font-weight: 600;
 }
 
 nav a.active::after {
@@ -38,4 +61,103 @@ nav a.active::after {
   width: 100%;
   height: 2px;
   background: var(--primary);
+  border-radius: 2px;
+}
+
+/* TOGGLE BUTTON */
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all .3s ease;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+/* ===== Tablet & Mobile ===== */
+@media (max-width: 768px) {
+
+  .nav-inner {
+    height: 64px;
+  }
+
+  .brand img {
+    height: 36px;
+  }
+
+  /* Show toggle */
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Mobile menu */
+  nav {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-top: 1px solid var(--border);
+    padding: 16px 24px 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all .25s ease;
+  }
+
+  nav.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  nav a {
+    margin: 0;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  nav a.active::after {
+    display: none;
+  }
+
+  nav a.active {
+    font-weight: 600;
+  }
+}
+
+/* ==========================================================
+   HAMBURGER ANIMATION
+========================================================== */
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }

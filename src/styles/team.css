@@ -66,20 +66,99 @@
 }
 
 
-/* MOBILE */
+/* ==========================================================
+   RESPONSIVE – TEAM SECTION
+========================================================== */
+
+/* ===== Tablet Large (≤1024px) ===== */
+@media (max-width: 1024px) {
+  .team-section {
+    gap: 56px;
+    padding: 0 6vw;
+  }
+
+  .team-text h2 {
+    font-size: 34px;
+  }
+
+  .team-text .role {
+    font-size: 16px;
+  }
+
+  .team-photo img {
+    max-width: 460px;
+  }
+}
+
+/* ===== Tablet / Small Laptop (≤900px) ===== */
 @media (max-width: 900px) {
   .team-section {
     grid-template-columns: 1fr;
-    padding: 100px 24px;
+    min-height: auto;
+    padding: 96px 24px;
     gap: 40px;
     text-align: center;
+
+    /* Motion lebih halus */
+    transform: translateY(40px);
   }
 
   .team-section.reverse .team-photo {
     order: 0;
   }
 
+  .team-text h2 {
+    font-size: 30px;
+  }
+
+  .team-text .role {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .meta p {
+    font-size: 15px;
+  }
+
   .team-photo img {
-    height: 420px;
+    max-width: 420px;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,.16));
+  }
+}
+
+/* ===== Mobile (≤600px) ===== */
+@media (max-width: 600px) {
+  .team-section {
+    padding: 72px 20px;
+    gap: 32px;
+  }
+
+  .team-text h2 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  .team-text .role {
+    font-size: 15px;
+  }
+
+  .meta p {
+    font-size: 14.5px;
+  }
+
+  .team-photo img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ===== Small Mobile (≤420px) ===== */
+@media (max-width: 420px) {
+  .team-text h2 {
+    font-size: 24px;
+  }
+
+  .team-section {
+    padding: 64px 16px;
   }
 }
