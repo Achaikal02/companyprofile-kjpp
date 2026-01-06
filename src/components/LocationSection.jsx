@@ -8,7 +8,7 @@ export default function LocationSection() {
         
         {/* INFO */}
         <div className="location-info">
-          <h2>Lokasi Kantor Kami</h2>
+          <h2>Kantor Pusat</h2>
           <p>
             KJPP Ayon Suherman & Rekan berlokasi di Jakarta Selatan dan siap
             melayani kebutuhan penilaian serta konsultasi profesional Anda.

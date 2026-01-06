@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import '../styles/home.css'
 import ServicesShowcase from '../components/ServicesShowcase'
 import aboutHero from '../assets/team/kjppasr.png'
+import IndonesiaMapSection from '../components/IndonesiaMapSection'
 
 const Home = () => {
   return (
@@ -64,6 +65,7 @@ const Home = () => {
       </section>
 
       <ServicesShowcase />
+      <IndonesiaMapSection />
       <LocationSection />
     </>
   )

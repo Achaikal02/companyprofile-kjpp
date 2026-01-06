@@ -1,0 +1,423 @@
+/* ===============================
+   MAP SECTION
+================================ */
+
+.map-section {
+  padding: 100px 24px;
+  background: #f8fafc;
+}
+
+.map-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* ===============================
+   MAP WRAPPER
+================================ */
+
+.map-wrapper {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.indonesia-map {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===============================
+   MARKER
+================================ */
+
+.map-marker {
+  cursor: pointer;
+}
+
+.map-marker circle:first-child {
+  fill: #2563eb;
+  stroke: #ffffff;
+  stroke-width: 2;
+  transition: transform 0.25s ease, fill 0.25s ease;
+}
+
+/* hover hanya efek visual kecil */
+.map-marker:hover circle:first-child {
+  transform: scale(1.15);
+}
+
+/* ACTIVE STATE */
+.map-marker.active circle:first-child {
+  fill: #1e40af;
+  transform: scale(1.4);
+}
+
+/* pulse animation */
+.map-marker .pulse {
+  fill: rgba(37, 99, 235, 0.25);
+  animation: pulse 2s infinite;
+}
+
+.map-marker.active .pulse {
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    r: 6;
+    opacity: 1;
+  }
+  100% {
+    r: 18;
+    opacity: 0;
+  }
+}
+
+/* ===============================
+   HQ MARKER
+================================ */
+
+.map-marker.hq circle:first-child {
+  fill: #f59e0b;            /* emas */
+  stroke: #ffffff;
+  stroke-width: 2;
+}
+
+.map-marker.hq .pulse {
+  fill: rgba(245, 158, 11, 0.35);
+}
+
+.map-marker.hq.active circle:first-child {
+  fill: #d97706;
+  transform: scale(1.6);
+}
+
+
+/* ===============================
+   INFO PANEL
+================================ */
+
+.map-info {
+  background: #ffffff;
+  padding: 40px 36px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.map-info-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.map-info h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.map-info .badge {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.map-info .address {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 24px;
+}
+
+.map-info .contact {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.map-info .contact li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #334155;
+}
+
+.map-info .contact strong {
+  color: #0f172a;
+}
+
+/* link */
+.map-info .map-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.map-info .map-link:hover {
+  color: #1e40af;
+}
+
+/* ===============================
+   PLACEHOLDER
+================================ */
+
+.map-placeholder {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.map-placeholder strong {
+  display: block;
+  font-size: 18px;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.map-placeholder p {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ===============================
+   BRANCH LIST (DEFAULT STATE)
+================================ */
+
+.map-list-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.map-list-hint {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.branch-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.branch-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.branch-item:hover {
+  background: #f1f5f9;
+}
+
+.branch-item strong {
+  display: block;
+  font-size: 15px;
+  color: #0f172a;
+}
+
+.branch-item span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* dot */
+.branch-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+/* HQ indicator */
+.branch-item.hq .branch-dot {
+  background: #f59e0b;
+}
+
+/* ===============================
+   MAP ACTION BUTTONS
+================================ */
+
+.map-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+/* PRIMARY BUTTON */
+.btn-map {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-map:hover {
+  background: #1e40af;
+  transform: translateY(-1px);
+}
+
+/* SECONDARY BUTTON */
+.btn-back {
+  background: none;
+  border: none;
+  padding: 12px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2563eb;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.btn-back:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+/* ===== Tablet & Mobile (≤1024px) ===== */
+@media (max-width: 1024px) {
+  .map-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* Map jadi konten pendukung */
+  .map-wrapper {
+    order: 2;
+  }
+
+  /* Info panel jadi fokus */
+  .map-info {
+    order: 1;
+  }
+}
+
+/* ===== Mobile (≤768px) ===== */
+@media (max-width: 768px) {
+  .map-section {
+    padding: 56px 16px;
+  }
+
+  .map-wrapper {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  /* Batasi tinggi map */
+  .indonesia-map {
+    max-height: 320px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .map-info {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+
+  .map-info-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .map-info h3 {
+    font-size: 20px;
+  }
+
+  .map-info .badge {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .map-info .address,
+  .map-info .contact li {
+    font-size: 14px;
+  }
+
+  /* Branch list lebih rapat */
+  .branch-item {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .branch-item strong {
+    font-size: 14px;
+  }
+
+  .branch-item span {
+    font-size: 12px;
+  }
+
+  /* Tombol full-width */
+  .map-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btn-map {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .btn-back {
+    text-align: center;
+  }
+}
+
+/* ===== Small Mobile (≤420px) ===== */
+@media (max-width: 420px) {
+  .indonesia-map {
+    max-height: 260px;
+  }
+
+  .map-info h3 {
+    font-size: 18px;
+  }
+
+  .map-list-title {
+    font-size: 18px;
+  }
+
+  .map-list-hint {
+    font-size: 13px;
+  }
+}
+
