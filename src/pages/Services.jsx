@@ -45,7 +45,11 @@ export default function Services() {
             <div className="hero-card">Penilaian Properti</div>
             <div className="hero-card">Konsultasi Pengembangan</div>
             <div className="hero-card">Pengawasan Proyek</div>
-            <div className="hero-card">Teknologi Informasi</div>
+            <div className="hero-card">Pengelolaan Asset</div>
+            <div className="hero-card">Konsultan Agribisnis</div>
+            <div className="hero-card">Management Properti</div>
+            <div className="hero-card">Investasi Properti</div>
+            <div className="hero-card">Konsultasi Keuangan</div>
           </div>
 
         </div>

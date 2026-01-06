@@ -9,6 +9,13 @@ export default function IndonesiaMapSection() {
 
   return (
     <section className="map-section">
+        <div className="map-section-header">
+            <h2>Jaringan Kantor Nasional</h2>
+            <p>
+            Kami memiliki jaringan kantor yang tersebar di berbagai wilayah Indonesia
+            untuk memastikan layanan yang dekat, responsif, dan terpercaya bagi klien.
+            </p>
+        </div>
       <div className="map-container">
 
         {/* MAP */}

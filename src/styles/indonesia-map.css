@@ -1,6 +1,28 @@
 /* ===============================
    MAP SECTION
 ================================ */
+.map-section-header {
+  max-width: 1320px;
+  margin: 0 auto 56px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.map-section-header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.map-section-header p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+}
 
 .map-section {
   padding: 100px 24px;
